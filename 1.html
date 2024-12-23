@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دروس تعليمية في البرمجة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #4e73df;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        #search {
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .sections-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-around;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4e73df;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .lesson-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lesson-item {
+            margin: 10px 0;
+        }
+
+        .lesson-item a {
+            color: #1cc88a;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .lesson-item a:hover {
+            color: #333;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* زر العرض */
+        .show-video-btn {
+            background-color: #4e73df;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .show-video-btn:hover {
+            background-color: #333;
+        }
+
+        /* إخفاء مقاطع الفيديو بشكل افتراضي */
+        .video-container {
+            display: none;
+        }
+        /* تنسيق الزر */
+.back-to-home {
+    background-color: white; /* لون خلفية الزر */
+    color: #4e73df; /* لون النص */
+    padding: 10px 20px; /* المسافة الداخلية حول النص */
+    font-size: 1.2em; /* حجم النص */
+    border-radius: 5px; /* تحديد الحواف الدائرية */
+    text-decoration: none; /* إزالة خط تحت النص */
+    display: inline-block; /* جعل الزر يظهر بجانب العناصر الأخرى */
+    margin-top: 10px; /* المسافة من أعلى الزر */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* تأثير الانتقال */
+    text-align: center; /* محاذاة النص في الوسط */
+    border: 2px solid #4e73df; /* تحديد الحدود باللون الأزرق */
+}
+
+/* حالة التمرير على الزر */
+.back-to-home:hover {
+    background-color: #4e73df; /* تغيير لون الخلفية إلى الأزرق عند التمرير */
+    color: white; /* تغيير لون النص إلى الأبيض */
+    transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>دروس تعليمية في البرمجة</h1>
+            <input type="text" id="search" placeholder="ابحث عن الكورس أو اللغة..." oninput="filterCourses()">
+            <div class="container">
+
+                <a href="index.html" class="back-to-home">العودة إلى الصفحة الرئيسية</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sections-container" id="sections-container">
+            <!-- قسم بايثون -->
+            <section class="section" id="python">
+                <h2>تعليم بايثون في ساعة</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/9OgOay9bRU8?si=npBRmwrH_xqkIoMd">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9OgOay9bRU8?si=npBRmwrH_xqkIoMd" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- قسم جافا -->
+            <section class="section" id="java">
+                <h2>تعليم جافا</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/e-a7OiTmA64?si=BBI6WojJ3A8mfF2e">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/e-a7OiTmA64?si=BBI6WojJ3A8mfF2e" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- قسم جافا سكريبت -->
+            <section class="section" id="javascript">
+                <h2>تعليم جافا سكريبت</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/efz9Ylw7_qk?si=dA69XJCCUt8BjtS3">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/efz9Ylw7_qk?si=dA69XJCCUt8BjtS3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- قسم سي بلس بلس -->
+            <section class="section" id="cpp">
+                <h2>تعليم سي بلس بلس</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/07AC2Syf4Yg?si=1Bx3SAErWjuAj6mN">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/07AC2Syf4Yg?si=1Bx3SAErWjuAj6mN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- قسم CSS و HTML -->
+            <section class="section" id="csshtml">
+                <h2>تعليم CSS و HTML معًا</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/Pwatx1n1Ws0?si=gfJNArWmTyRT4IAt">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Pwatx1n1Ws0?si=gfJNArWmTyRT4IAt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- قسم PHP -->
+            <section class="section" id="php">
+                <h2>تعليم PHP</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/pszZMzI9a7A?si=ny1ZHPyBBJAI7u0R">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/pszZMzI9a7A?si=ny1ZHPyBBJAI7u0R" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- قسم Ruby -->
+            <section class="section" id="ruby">
+                <h2>تعليم Ruby</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/i4bNFlfcq1s?si=aKF4CClfGWoGnWjN">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/i4bNFlfcq1s?si=aKF4CClfGWoGnWjN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+                        <!-- قسم C# -->
+                        <section class="section" id="csharp">
+                            <h2>تعليم C#</h2>
+                            <div class="lesson-list">
+                                <div class="lesson-item">
+                                    <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/ELglVujXcNQ?si=dBNaV6_NtypEOYDg">شاهد الفيديو</a>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/ELglVujXcNQ?si=dBNaV6_NtypEOYDg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </section>
+
+                                    <!-- قسم Kotlin -->
+            <section class="section" id="kotlin">
+                <h2>تعليم Kotlin</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <a href="javascript:void(0);" class="show-video-btn" data-video="https://www.youtube.com/embed/IMtzeXHP9_0?si=LHIQvNgosmKz0-Yh">شاهد الفيديو</a>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/IMtzeXHP9_0?si=LHIQvNgosmKz0-Yh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        function filterCourses() {
+            let searchValue = document.getElementById('search').value.toLowerCase();
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(section => {
+                let sectionName = section.querySelector('h2').textContent.toLowerCase();
+                if (sectionName.includes(searchValue)) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        const videoButtons = document.querySelectorAll('.show-video-btn');
+
+        videoButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const videoUrl = this.getAttribute('data-video');
+                const videoContainer = this.closest('.section').querySelector('.video-container');
+                videoContainer.style.display = 'block';
+                videoContainer.querySelector('iframe').src = videoUrl;
+            });
+        });
+    </script>
+</body>
+</html>
