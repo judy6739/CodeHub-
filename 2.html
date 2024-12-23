@@ -120,7 +120,89 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
           }
           
-          
+
+      /* الأساسيات */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* الشريط العلوي (Header) */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* قسم المحتوى */
+main {
+    padding: 20px;
+}
+
+/* استعلامات الوسائط - Media Queries */
+
+/* إذا كانت الشاشة صغيرة أو تساوي 768px */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    header nav ul {
+        padding: 0;
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+/* إذا كانت الشاشة صغيرة جدًا أو تساوي 480px */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav ul li {
+        margin-bottom: 5px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
   
 
     </style>
